@@ -24,6 +24,10 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
+// Plugin dependent classes.
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
-include plugin_dir_path( __FILE__ )."src/contactForm7.php";
-$contactForm7 = new Theta\ThemeSnippet\ContactForm7();
+if (is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
+	include plugin_dir_path( __FILE__ ) . "src/contactForm7.php";
+	$contactForm7 = new Theta\ThemeSnippet\ContactForm7();
+}

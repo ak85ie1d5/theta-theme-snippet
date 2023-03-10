@@ -11,7 +11,7 @@
  * Plugin Name:       Theta Theme Snippet
  * Plugin URI:        https://github.com/ak85ie1d5/theta-theme-snippet
  * Description:       Large set of code snippet to extends and enhanced Agence Theta website.
- * Version:           0.1
+ * Version:           0.2
  * Requires at least: 6.1.0
  * Requires PHP:      8.0
  * Author:            Jeremy SPAETH
@@ -23,3 +23,7 @@
  */
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
+
+include plugin_dir_path( __FILE__ )."src/contactForm7.php";
+$contactForm7 = new Theta\ThemeSnippet\ContactForm7();
